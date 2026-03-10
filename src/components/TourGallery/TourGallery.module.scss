@@ -1,0 +1,105 @@
+@use '../../styles/variables.module' as v;
+
+.gallery {
+  padding:    v.$sp-20 0;
+  background: var(--bg-primary);
+
+  @include v.md { padding: v.$sp-12 0; }
+}
+
+.container {
+  max-width: v.$max-width;
+  margin:    0 auto;
+  padding:   0 v.$sp-6;
+
+  @include v.md { padding: 0 v.$sp-4; }
+}
+
+// ── Section heading ───────────────────────────────────────────────────────
+.heading {
+  text-align:    center;
+  margin-bottom: v.$sp-10;
+
+  h2 {
+    font-size:   v.$text-4xl;
+    font-weight: 800;
+    color:       var(--text-primary);
+    line-height: 1.2;
+
+    @include v.md { font-size: v.$text-3xl; }
+  }
+
+  p {
+    margin-top:  v.$sp-3;
+    font-size:   v.$text-lg;
+    color:       var(--text-secondary);
+  }
+}
+
+.accent { color: var(--accent); }
+
+// ── Filter tabs ───────────────────────────────────────────────────────────
+.filters {
+  display:         flex;
+  justify-content: center;
+  gap:             v.$sp-2;
+  margin-bottom:   v.$sp-10;
+  flex-wrap:       wrap;
+}
+
+.filterBtn {
+  position:      relative;
+  padding:       v.$sp-2 v.$sp-6;
+  border-radius: v.$radius-full;
+  font-size:     v.$text-base;
+  font-weight:   600;
+  color:         var(--text-secondary);
+  background:    var(--bg-secondary);
+  border:        1px solid var(--border);
+  transition:    v.$transition-fast;
+  overflow:      hidden;
+
+  &:hover:not(.active) {
+    color:      var(--text-primary);
+    background: var(--accent-light);
+    border-color: var(--accent);
+  }
+
+  &.active {
+    color:       #fff;
+    border-color: transparent;
+  }
+}
+
+// Animated background pill for active filter
+.filterPill {
+  position:      absolute;
+  inset:         0;
+  background:    var(--accent);
+  border-radius: v.$radius-full;
+  z-index:       -1;
+}
+
+// ── Card grid ─────────────────────────────────────────────────────────────
+.grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   v.$sp-6;
+
+  @include v.lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include v.md {
+    grid-template-columns: 1fr;
+    gap: v.$sp-4;
+  }
+}
+
+.empty {
+  grid-column:  1 / -1;
+  text-align:   center;
+  color:        var(--text-muted);
+  font-size:    v.$text-lg;
+  padding:      v.$sp-16 0;
+}
