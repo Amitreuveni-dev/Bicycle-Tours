@@ -1,0 +1,92 @@
+@use './variables.module' as v;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// globals.scss — reset, base styles, RTL, typography
+// Imported once in main.tsx as a side-effect (no module scoping).
+// ─────────────────────────────────────────────────────────────────────────────
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin:     0;
+  padding:    0;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction:       rtl;   // Full RTL — Hebrew layout
+  font-size:       16px;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family:              v.$font-primary;
+  background-color:         var(--bg-primary);
+  color:                    var(--text-primary);
+  line-height:              1.65;
+  -webkit-font-smoothing:   antialiased;
+  -moz-osx-font-smoothing:  grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+img   { max-width: 100%; height: auto; display: block; }
+a     { text-decoration: none; color: inherit; }
+ul    { list-style: none; }
+button{ cursor: pointer; border: none; background: none; font-family: inherit; }
+
+// ── Custom scrollbar ───────────────────────────────────────────────────────
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb  { background: var(--accent); border-radius: v.$radius-full; }
+
+// ── Accessibility: visible focus ring ─────────────────────────────────────
+:focus-visible {
+  outline:        2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius:  v.$radius-sm;
+}
+
+// ── Global section / container helpers ────────────────────────────────────
+.section {
+  padding: v.$sp-20 v.$sp-6;
+
+  @include v.md {
+    padding: v.$sp-12 v.$sp-4;
+  }
+}
+
+.container {
+  max-width: v.$max-width;
+  margin:    0 auto;
+  padding:   0 v.$sp-6;
+
+  @include v.md {
+    padding: 0 v.$sp-4;
+  }
+}
+
+// ── Section heading utility ────────────────────────────────────────────────
+.section-heading {
+  text-align:    center;
+  margin-bottom: v.$sp-12;
+
+  h2 {
+    font-size:   v.$text-4xl;
+    font-weight: 800;
+    line-height: 1.2;
+    @include v.md { font-size: v.$text-3xl; }
+  }
+
+  p {
+    margin-top:  v.$sp-3;
+    color:       var(--text-secondary);
+    font-size:   v.$text-lg;
+    max-width:   560px;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+  .accent { color: var(--accent); }
+}

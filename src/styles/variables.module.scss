@@ -1,0 +1,129 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// variables.module.scss
+// Source of Truth for all design tokens.
+// • CSS Custom Properties → theme switching (dark / light)
+// • SCSS variables         → static layout/typography values
+// • :export block          → values consumed by TypeScript
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ── Light Theme ──────────────────────────────────────────────────────────────
+:root,
+:root[data-theme='light'] {
+  --bg-primary:    #fafafa;
+  --bg-secondary:  #f0f0f0;
+  --bg-card:       #ffffff;
+  --bg-overlay:    rgba(255, 255, 255, 0.95);
+
+  --text-primary:  #111111;
+  --text-secondary:#555555;
+  --text-muted:    #999999;
+  --text-inverse:  #ffffff;
+
+  --accent:        #ff6b00;
+  --accent-hover:  #e55a00;
+  --accent-light:  rgba(255, 107, 0, 0.12);
+
+  --nav-bg:        rgba(250, 250, 250, 0.9);
+  --border:        rgba(0, 0, 0, 0.09);
+  --border-strong: rgba(0, 0, 0, 0.18);
+
+  --shadow-sm:     0 2px 8px  rgba(0, 0, 0, 0.08);
+  --shadow-md:     0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg:     0 8px 40px rgba(0, 0, 0, 0.18);
+  --shadow-accent: 0 4px 24px rgba(255, 107, 0, 0.35);
+
+  --skeleton-base: #e2e2e2;
+  --skeleton-shine:#f0f0f0;
+
+  --difficulty-empty: rgba(0, 0, 0, 0.15);
+}
+
+// ── Dark Theme ────────────────────────────────────────────────────────────────
+:root[data-theme='dark'] {
+  --bg-primary:    #0a0a0a;
+  --bg-secondary:  #141414;
+  --bg-card:       #1a1a1a;
+  --bg-overlay:    rgba(10, 10, 10, 0.9);
+
+  --text-primary:  #f0f0f0;
+  --text-secondary:#aaaaaa;
+  --text-muted:    #666666;
+  --text-inverse:  #111111;
+
+  --accent:        #ff6b00;
+  --accent-hover:  #ff8c33;
+  --accent-light:  rgba(255, 107, 0, 0.15);
+
+  --nav-bg:        rgba(10, 10, 10, 0.9);
+  --border:        rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --shadow-sm:     0 2px 8px  rgba(0, 0, 0, 0.35);
+  --shadow-md:     0 4px 20px rgba(0, 0, 0, 0.55);
+  --shadow-lg:     0 8px 40px rgba(0, 0, 0, 0.75);
+  --shadow-accent: 0 4px 24px rgba(255, 107, 0, 0.45);
+
+  --skeleton-base: #1e1e1e;
+  --skeleton-shine:#252525;
+
+  --difficulty-empty: rgba(255, 255, 255, 0.15);
+}
+
+// ── SCSS Variables (static — not theme-dependent) ─────────────────────────────
+$font-primary:      'Heebo', 'Assistant', sans-serif;
+$max-width:         1200px;
+$nav-height:        72px;
+
+$radius-sm:         8px;
+$radius-md:         12px;
+$radius-lg:         20px;
+$radius-full:       9999px;
+
+$transition-fast:   all 0.18s ease;
+$transition-base:   all 0.3s  ease;
+$transition-slow:   all 0.5s  ease;
+
+// Spacing scale (rem)
+$sp-1:  0.25rem;
+$sp-2:  0.5rem;
+$sp-3:  0.75rem;
+$sp-4:  1rem;
+$sp-5:  1.25rem;
+$sp-6:  1.5rem;
+$sp-8:  2rem;
+$sp-10: 2.5rem;
+$sp-12: 3rem;
+$sp-16: 4rem;
+$sp-20: 5rem;
+$sp-24: 6rem;
+
+// Type scale (rem)
+$text-xs:   0.75rem;
+$text-sm:   0.875rem;
+$text-base: 1rem;
+$text-lg:   1.125rem;
+$text-xl:   1.25rem;
+$text-2xl:  1.5rem;
+$text-3xl:  1.875rem;
+$text-4xl:  2.25rem;
+$text-5xl:  3rem;
+$text-6xl:  3.75rem;
+
+// Breakpoints
+$sm:  576px;
+$md:  768px;
+$lg:  1024px;
+$xl:  1280px;
+
+// Responsive helper mixins
+@mixin sm  { @media (max-width: #{$sm}) { @content; } }
+@mixin md  { @media (max-width: #{$md}) { @content; } }
+@mixin lg  { @media (max-width: #{$lg}) { @content; } }
+
+// ── Export to TypeScript ──────────────────────────────────────────────────────
+:export {
+  accent:       #ff6b00;
+  maxWidth:     1200px;
+  navHeight:    72px;
+  radiusMd:     12px;
+}
