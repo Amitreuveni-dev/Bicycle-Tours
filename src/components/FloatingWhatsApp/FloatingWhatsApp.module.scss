@@ -1,0 +1,88 @@
+@use '../../styles/variables.module' as v;
+
+$wa-color:    #25d366;
+$wa-size:     58px;
+$offset:      v.$sp-6;
+
+// RTL: position on left side (visually right in RTL UI = left in LTR)
+.wrapper {
+  position:   fixed;
+  bottom:     $offset;
+  inset-inline-start: $offset; // RTL = left: $offset
+  z-index:    1500;
+  display:    flex;
+  align-items: flex-end;
+  gap:         v.$sp-3;
+}
+
+// ── Pulse ring animation ───────────────────────────────────────────────────
+.pulse {
+  position:      absolute;
+  inset:         0;
+  border-radius: v.$radius-full;
+  background:    $wa-color;
+  opacity:       0.4;
+  animation:     pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1);    opacity: 0.4; }
+  50%  { transform: scale(1.5);  opacity: 0;   }
+  100% { transform: scale(1);    opacity: 0;   }
+}
+
+// ── Main button ───────────────────────────────────────────────────────────
+.btn {
+  position:        relative;
+  width:           $wa-size;
+  height:          $wa-size;
+  border-radius:   v.$radius-full;
+  background:      $wa-color;
+  color:           #fff;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  box-shadow:      0 4px 20px rgba(37, 211, 102, 0.5);
+  transition:      v.$transition-fast;
+  flex-shrink:     0;
+
+  &:hover {
+    background: #1ebe5c;
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.65);
+  }
+}
+
+// ── Tooltip ───────────────────────────────────────────────────────────────
+.tooltip {
+  position:      relative;
+  background:    var(--bg-card);
+  border:        1px solid var(--border-strong);
+  border-radius: v.$radius-md;
+  padding:       v.$sp-3 v.$sp-5 v.$sp-3 v.$sp-8;
+  box-shadow:    var(--shadow-md);
+  white-space:   nowrap;
+}
+
+.tooltipTitle {
+  font-size:   v.$text-sm;
+  font-weight: 700;
+  color:       var(--text-primary);
+}
+
+.tooltipSub {
+  font-size:   v.$text-xs;
+  color:       var(--text-secondary);
+  margin-top:  v.$sp-1;
+}
+
+.tooltipClose {
+  position:    absolute;
+  top:         v.$sp-2;
+  inset-inline-end: v.$sp-2;
+  color:       var(--text-muted);
+  display:     flex;
+  align-items: center;
+  transition:  v.$transition-fast;
+
+  &:hover { color: var(--text-primary); }
+}
