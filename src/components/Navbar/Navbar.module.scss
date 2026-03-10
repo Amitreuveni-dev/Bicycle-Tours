@@ -1,0 +1,206 @@
+@use '../../styles/variables.module' as v;
+
+.nav {
+  position:   fixed;
+  top:        0;
+  inset-inline: 0;  // RTL-aware left + right: 0
+  z-index:    1000;
+  height:     v.$nav-height;
+  padding:    0 v.$sp-6;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  &.scrolled {
+    background:  var(--nav-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow:  var(--shadow-sm);
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.inner {
+  max-width:       v.$max-width;
+  margin:          0 auto;
+  height:          100%;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             v.$sp-6;
+}
+
+// ── Logo ──────────────────────────────────────────────────────────────────
+.logo {
+  display:      flex;
+  align-items:  center;
+  gap:          v.$sp-2;
+  font-size:    v.$text-xl;
+  font-weight:  400;
+  color:        var(--text-primary);
+  transition:   v.$transition-fast;
+  white-space:  nowrap;
+
+  strong { font-weight: 800; color: var(--accent); }
+
+  &:hover { color: var(--accent); }
+}
+
+.logoIcon {
+  color:           var(--accent);
+  flex-shrink:     0;
+}
+
+.logoSuffix {
+  color:       var(--text-secondary);
+  font-size:   v.$text-base;
+  font-weight: 300;
+}
+
+// ── Desktop nav links ─────────────────────────────────────────────────────
+.links {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-1;
+  list-style:  none;
+
+  @include v.lg { display: none; }
+}
+
+.link {
+  position:    relative;
+  padding:     v.$sp-2 v.$sp-3;
+  font-size:   v.$text-base;
+  font-weight: 500;
+  color:       var(--text-secondary);
+  border-radius: v.$radius-sm;
+  transition:  v.$transition-fast;
+
+  &:hover {
+    color:      var(--text-primary);
+    background: var(--accent-light);
+  }
+
+  &.active { color: var(--text-primary); }
+}
+
+.linkUnderline {
+  position:      absolute;
+  bottom:        2px;
+  inset-inline:  v.$sp-3; // RTL-aware
+  height:        2px;
+  background:    var(--accent);
+  border-radius: v.$radius-full;
+}
+
+// ── Actions ───────────────────────────────────────────────────────────────
+.actions {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-3;
+}
+
+.themeBtn {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           38px;
+  height:          38px;
+  border-radius:   v.$radius-full;
+  color:           var(--text-secondary);
+  background:      var(--accent-light);
+  transition:      v.$transition-fast;
+
+  &:hover {
+    color:      var(--accent);
+    background: var(--accent-light);
+  }
+}
+
+.cta {
+  padding:       v.$sp-2 v.$sp-5;
+  background:    var(--accent);
+  color:         #fff;
+  font-size:     v.$text-sm;
+  font-weight:   700;
+  border-radius: v.$radius-full;
+  transition:    v.$transition-fast;
+  white-space:   nowrap;
+  box-shadow:    var(--shadow-accent);
+
+  &:hover {
+    background:  var(--accent-hover);
+  }
+
+  @include v.lg { display: none; }
+}
+
+.hamburger {
+  display:         none;
+  align-items:     center;
+  justify-content: center;
+  width:           40px;
+  height:          40px;
+  color:           var(--text-primary);
+  border-radius:   v.$radius-sm;
+  transition:      v.$transition-fast;
+
+  &:hover { background: var(--accent-light); }
+
+  @include v.lg { display: flex; }
+}
+
+// ── Mobile drawer ─────────────────────────────────────────────────────────
+.drawer {
+  display:      none;
+  position:     absolute;
+  top:          v.$nav-height;
+  inset-inline: 0;
+  background:   var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding:       v.$sp-4 v.$sp-6 v.$sp-6;
+
+  @include v.lg { display: block; }
+
+  ul {
+    display:        flex;
+    flex-direction: column;
+    gap:            v.$sp-2;
+    max-width:      v.$max-width;
+    margin:         0 auto;
+  }
+}
+
+.drawerLink {
+  display:     block;
+  width:       100%;
+  text-align:  right;
+  padding:     v.$sp-3 v.$sp-4;
+  font-size:   v.$text-lg;
+  font-weight: 500;
+  color:       var(--text-secondary);
+  border-radius: v.$radius-md;
+  transition:  v.$transition-fast;
+
+  &:hover, &.active {
+    color:      var(--text-primary);
+    background: var(--accent-light);
+  }
+}
+
+.drawerCta {
+  display:     block;
+  width:       100%;
+  text-align:  center;
+  padding:     v.$sp-3 v.$sp-4;
+  margin-top:  v.$sp-2;
+  font-size:   v.$text-base;
+  font-weight: 700;
+  background:  var(--accent);
+  color:       #fff;
+  border-radius: v.$radius-full;
+  transition:  v.$transition-fast;
+
+  &:hover { background: var(--accent-hover); }
+}
