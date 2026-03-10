@@ -1,0 +1,42 @@
+@use './styles/variables.module' as v;
+
+.app {
+  min-height: 100vh;
+  display:    flex;
+  flex-direction: column;
+}
+
+// ── Footer ─────────────────────────────────────────────────────────────────
+.footer {
+  background:    var(--bg-secondary);
+  border-top:    1px solid var(--border);
+  padding:       v.$sp-10 v.$sp-6;
+  margin-top:    auto;
+}
+
+.footerInner {
+  max-width:   v.$max-width;
+  margin:      0 auto;
+  text-align:  center;
+  display:     flex;
+  flex-direction: column;
+  gap:         v.$sp-2;
+}
+
+.brand {
+  font-size:   v.$text-xl;
+  font-weight: 800;
+  color:       var(--accent);
+  letter-spacing: -0.5px;
+}
+
+.copy {
+  font-size:   v.$text-sm;
+  color:       var(--text-muted);
+}
+
+.tagline {
+  font-size:   v.$text-sm;
+  color:       var(--text-secondary);
+  font-weight: 500;
+}
