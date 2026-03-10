@@ -1,0 +1,138 @@
+[
+  {
+    "id": "1",
+    "title": "יער הכרמל",
+    "subtitle": "שבילי יחיד ירוקים עם נוף לים התיכון",
+    "price": 420,
+    "difficulty": 2,
+    "category": "XC",
+    "image": "https://images.unsplash.com/photo-1571188654248-7a89213915f7?w=800&auto=format&fit=crop&q=80",
+    "duration": "4 שעות",
+    "distance": "22 ק\"מ",
+    "elevation": "380 מ'",
+    "location": "חיפה",
+    "description": "טיול מרהיב ביערות הכרמל הירוקים, עם שבילי יחיד מפותלים בין עצי אורן ואלון. בדרך תיהנו מנקודות תצפית עוצרות נשימה על מפרץ חיפה ועל הים התיכון. מסלול מושלם למי שמחפש חוויה טבעית עשירה ברמת קושי נוחה.",
+    "included": [
+      { "icon": "ShieldCheck", "text": "ציוד בטיחות מלא" },
+      { "icon": "Users",       "text": "מדריך מוסמך ומנוסה" },
+      { "icon": "Coffee",      "text": "כיבוד ונשנושים באמצע" },
+      { "icon": "FileCheck",   "text": "ביטוח מקיף" }
+    ],
+    "equipment": ["קסדה", "כפפות", "נעלי רכיבה", "משקפי מגן"],
+    "highlights": ["נוף פנורמי למפרץ חיפה", "שבילי יחיד טכניים", "מעיין טבעי בדרך"]
+  },
+  {
+    "id": "2",
+    "title": "הנגב הסודי",
+    "subtitle": "כניסה ללב המדבר — נוף ירחי ואתגר אמיתי",
+    "price": 680,
+    "difficulty": 4,
+    "category": "MTB",
+    "image": "https://images.unsplash.com/photo-1533130061792-64b345e4a833?w=800&auto=format&fit=crop&q=80",
+    "duration": "7 שעות",
+    "distance": "40 ק\"מ",
+    "elevation": "900 מ'",
+    "location": "מכתש רמון",
+    "description": "אחד המסלולים המרתקים בישראל — בתוך מכתש רמון הייחודי בעולם. ירידות שמן ועליות מאתגרות על גבי שבילי בזלת וחול צהוב. חוויה ויזואלית וגופנית לא נשכחת, מיועדת לרוכבים בעלי ניסיון.",
+    "included": [
+      { "icon": "ShieldCheck", "text": "ציוד בטיחות מלא" },
+      { "icon": "Users",       "text": "מדריך מדבר מומחה" },
+      { "icon": "Utensils",    "text": "ארוחת צהריים מדברית" },
+      { "icon": "Droplets",    "text": "אספקת מים ואלקטרוליטים" },
+      { "icon": "FileCheck",   "text": "ביטוח מקיף" }
+    ],
+    "equipment": ["קסדה מלאה", "כפפות MTB", "נעלי שפיץ", "משקפי מגן", "רמון גב"],
+    "highlights": ["מכתש רמון הייחודי בעולם", "ירידות בזלת טכניות", "שקיעה במדבר"]
+  },
+  {
+    "id": "3",
+    "title": "הגליל העליון — eMTB",
+    "subtitle": "חוויית eMTB בשבילי הצפון הפתוחים",
+    "price": 890,
+    "difficulty": 2,
+    "category": "eMTB",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80",
+    "duration": "5 שעות",
+    "distance": "35 ק\"מ",
+    "elevation": "600 מ'",
+    "location": "ראש פינה",
+    "description": "טיול eMTB יחודי בגליל העליון, שמאפשר לכם להגיע לנקודות שמצריכות פיזיות גבוהה — בלי להתאמץ יותר מדי. מסלול ירוק ומושקה, עם כפרים ערביים ציוריים ומרחבי ירוק עצומים. כולל אופניים חשמליות באיכות Premium.",
+    "included": [
+      { "icon": "Bike",        "text": "אופניים חשמלית Premium" },
+      { "icon": "ShieldCheck", "text": "ציוד בטיחות מלא" },
+      { "icon": "Users",       "text": "מדריך מוסמך" },
+      { "icon": "Coffee",      "text": "כיבוד גליל מקומי" },
+      { "icon": "FileCheck",   "text": "ביטוח מקיף" }
+    ],
+    "equipment": ["קסדה", "כפפות", "נעלי ספורט"],
+    "highlights": ["אופניים חשמלית מקצועיות", "נוף גליל עליון", "כפרים ציוריים"]
+  },
+  {
+    "id": "4",
+    "title": "הרי יהודה",
+    "subtitle": "קניונים, היסטוריה ושבילי אדמה עתיקים",
+    "price": 560,
+    "difficulty": 3,
+    "category": "MTB",
+    "image": "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=800&auto=format&fit=crop&q=80",
+    "duration": "5.5 שעות",
+    "distance": "30 ק\"מ",
+    "elevation": "650 מ'",
+    "location": "בית שמש",
+    "description": "מסע בין קניוני הסורק וקניון הנחל בהרי יהודה, בנתיבים שבהם צעדו שיירות עתיקות לפני אלפי שנים. השילוב של היסטוריה, טבע ושבילי אדמה אדומה יוצר חוויה מרתקת. רמת קושי בינונית–גבוהה.",
+    "included": [
+      { "icon": "ShieldCheck", "text": "ציוד בטיחות מלא" },
+      { "icon": "Users",       "text": "מדריך היסטוריה וטבע" },
+      { "icon": "Coffee",      "text": "כיבוד ונשנושים" },
+      { "icon": "FileCheck",   "text": "ביטוח מקיף" }
+    ],
+    "equipment": ["קסדה", "כפפות MTB", "נעלי רכיבה", "משקפי מגן"],
+    "highlights": ["קניון הסורק עתיק", "שבילי אדמה אדומה", "נוף הרי יהודה"]
+  },
+  {
+    "id": "5",
+    "title": "חוף הכינרת",
+    "subtitle": "רכיבת בוקר קסומה לאורך שפת הים",
+    "price": 380,
+    "difficulty": 1,
+    "category": "XC",
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&auto=format&fit=crop&q=80",
+    "duration": "3.5 שעות",
+    "distance": "28 ק\"מ",
+    "elevation": "120 מ'",
+    "location": "טבריה",
+    "description": "מסלול קל ומהנה לאורך חוף הכינרת, עם עצירות בכפרים דייגים שקטים ומסעדות דגים. מתאים לכל הגילאים ולרוכבים בכל הרמות. נוף הכינרת הכחול והגולן ברקע — חוויה שלא תשכחו.",
+    "included": [
+      { "icon": "ShieldCheck", "text": "ציוד בטיחות מלא" },
+      { "icon": "Users",       "text": "מדריך מקומי" },
+      { "icon": "Utensils",    "text": "ארוחת בוקר גלילית" },
+      { "icon": "FileCheck",   "text": "ביטוח מקיף" }
+    ],
+    "equipment": ["קסדה", "כפפות", "נעלי ספורט"],
+    "highlights": ["נוף כינרת ירוק–כחול", "כפרי דייגים ציוריים", "ארוחת בוקר מקומית"]
+  },
+  {
+    "id": "6",
+    "title": "רמת הגולן — Expert",
+    "subtitle": "אתגר הגולן: שבילים קשים, נוף אגדי",
+    "price": 920,
+    "difficulty": 5,
+    "category": "MTB",
+    "image": "https://images.unsplash.com/photo-1547479565-ef67ab9c4cdf?w=800&auto=format&fit=crop&q=80",
+    "duration": "8 שעות",
+    "distance": "52 ק\"מ",
+    "elevation": "1300 מ'",
+    "location": "מרום הגולן",
+    "description": "המסלול המאתגר ביותר בתוכנית TrailBlaze — רק לרוכבים מנוסים בעלי כושר גופני גבוה. ירידות כבשות, שדות בזלת, ועמקים ירוקים על רקע הר החרמון. חוויה שתדבר לרוחכם שנים קדימה.",
+    "included": [
+      { "icon": "ShieldCheck", "text": "ציוד בטיחות מתקדם" },
+      { "icon": "Users",       "text": "מדריך Expert + רפואה" },
+      { "icon": "Utensils",    "text": "ארוחת צהריים ואנרגיה" },
+      { "icon": "Droplets",    "text": "אספקת מים מלאה" },
+      { "icon": "Wrench",      "text": "תמיכה טכנית בשטח" },
+      { "icon": "FileCheck",   "text": "ביטוח מורחב" }
+    ],
+    "equipment": ["קסדה מלאה", "כפפות", "נעלי שפיץ", "מגנים", "בגדי ספיגה", "רמון גב"],
+    "highlights": ["עלייה לחרמון בנוף", "ירידות בזלת אפיות", "לילה בקיבוץ גולן"]
+  }
+]
