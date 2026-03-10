@@ -1,0 +1,94 @@
+@use '../../styles/variables.module' as v;
+
+.section {
+  padding:    v.$sp-20 0;
+  background: var(--bg-secondary);
+
+  @include v.md { padding: v.$sp-12 0; }
+}
+
+.container {
+  max-width: v.$max-width;
+  margin:    0 auto;
+  padding:   0 v.$sp-6;
+
+  @include v.md { padding: 0 v.$sp-4; }
+}
+
+// ── Heading ───────────────────────────────────────────────────────────────
+.heading {
+  text-align:    center;
+  margin-bottom: v.$sp-12;
+
+  h2 {
+    font-size:   v.$text-4xl;
+    font-weight: 800;
+    color:       var(--text-primary);
+    line-height: 1.2;
+
+    @include v.md { font-size: v.$text-3xl; }
+  }
+
+  p {
+    margin-top: v.$sp-3;
+    font-size:  v.$text-lg;
+    color:      var(--text-secondary);
+  }
+}
+
+.accent { color: var(--accent); }
+
+// ── Grid ──────────────────────────────────────────────────────────────────
+.grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   v.$sp-6;
+
+  @include v.lg { grid-template-columns: repeat(2, 1fr); }
+  @include v.sm { grid-template-columns: 1fr; }
+}
+
+// ── Feature card ──────────────────────────────────────────────────────────
+.card {
+  background:    var(--bg-card);
+  border:        1px solid var(--border);
+  border-radius: v.$radius-lg;
+  padding:       v.$sp-8;
+  display:       flex;
+  flex-direction: column;
+  gap:           v.$sp-4;
+  transition:    v.$transition-base;
+  cursor:        default;
+
+  &:hover .iconWrapper {
+    background: var(--accent);
+    color:      #fff;
+    transform:  scale(1.1) rotate(-5deg);
+  }
+}
+
+.iconWrapper {
+  width:           52px;
+  height:          52px;
+  border-radius:   v.$radius-md;
+  background:      var(--accent-light);
+  color:           var(--accent);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  transition:      v.$transition-base;
+  flex-shrink:     0;
+}
+
+.cardTitle {
+  font-size:   v.$text-xl;
+  font-weight: 700;
+  color:       var(--text-primary);
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size:   v.$text-sm;
+  color:       var(--text-secondary);
+  line-height: 1.7;
+}

@@ -1,0 +1,101 @@
+@use '../../styles/variables.module' as v;
+
+.section {
+  padding:    v.$sp-20 0;
+  background: var(--bg-primary);
+
+  @include v.md { padding: v.$sp-12 0; }
+}
+
+.container {
+  max-width: 800px;
+  margin:    0 auto;
+  padding:   0 v.$sp-6;
+
+  @include v.md { padding: 0 v.$sp-4; }
+}
+
+// ── Heading ───────────────────────────────────────────────────────────────
+.heading {
+  text-align:    center;
+  margin-bottom: v.$sp-12;
+
+  h2 {
+    font-size:   v.$text-4xl;
+    font-weight: 800;
+    color:       var(--text-primary);
+    line-height: 1.2;
+
+    @include v.md { font-size: v.$text-3xl; }
+  }
+
+  p {
+    margin-top: v.$sp-3;
+    font-size:  v.$text-lg;
+    color:      var(--text-secondary);
+  }
+}
+
+.accent { color: var(--accent); }
+
+// ── Accordion list ────────────────────────────────────────────────────────
+.list {
+  display:        flex;
+  flex-direction: column;
+  gap:            v.$sp-3;
+}
+
+// ── Individual accordion item ─────────────────────────────────────────────
+.item {
+  background:    var(--bg-card);
+  border:        1px solid var(--border);
+  border-radius: v.$radius-md;
+  overflow:      hidden;
+  transition:    border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &.open {
+    border-color: var(--accent);
+    box-shadow:   0 0 0 1px var(--accent);
+  }
+}
+
+// ── Trigger button ────────────────────────────────────────────────────────
+.trigger {
+  width:           100%;
+  padding:         v.$sp-5 v.$sp-6;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             v.$sp-4;
+  text-align:      right;
+  transition:      v.$transition-fast;
+
+  &:hover { background: var(--accent-light); }
+}
+
+.question {
+  font-size:   v.$text-base;
+  font-weight: 600;
+  color:       var(--text-primary);
+  line-height: 1.4;
+  flex:        1;
+}
+
+.chevron {
+  color:       var(--accent);
+  flex-shrink: 0;
+  display:     flex;
+  align-items: center;
+}
+
+// ── Answer panel ──────────────────────────────────────────────────────────
+.panelWrapper {
+  overflow: hidden;
+}
+
+.answer {
+  padding:     0 v.$sp-6 v.$sp-5;
+  font-size:   v.$text-base;
+  color:       var(--text-secondary);
+  line-height: 1.75;
+}
