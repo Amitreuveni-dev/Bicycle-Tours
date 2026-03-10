@@ -8,7 +8,7 @@ import styles from './TourMatchForm.module.scss';
 // TourMatchForm — lead-gen form that opens WhatsApp with a pre-filled message
 // ─────────────────────────────────────────────────────────────────────────────
 
-const WHATSAPP_NUMBER = '972501234567'; // ← Replace with real business number
+const WHATSAPP_NUMBER = '+972547887700';
 
 const DESTINATIONS = [
   'יער הכרמל',

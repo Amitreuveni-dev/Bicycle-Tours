@@ -7,7 +7,7 @@ import styles from './FloatingWhatsApp.module.scss';
 // FloatingWhatsApp — fixed pulsing button, opens WA chat with greeting
 // ─────────────────────────────────────────────────────────────────────────────
 
-const WHATSAPP_NUMBER  = '972501234567'; // ← Replace with real number
+const WHATSAPP_NUMBER  = '+972547887700';
 const GREETING_MESSAGE = 'שלום TrailBlaze Israel! אני מעוניין/ת לשמוע על טיולי האופניים שלכם 🚵‍♂️';
 
 function buildLink(): string {
