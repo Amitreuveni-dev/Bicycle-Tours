@@ -1,0 +1,179 @@
+@use '../../../styles/variables.module' as v;
+
+.card {
+  background:    var(--bg-card);
+  border:        1px solid var(--border);
+  border-radius: v.$radius-lg;
+  overflow:      hidden;
+  cursor:        pointer;
+  display:       flex;
+  flex-direction: column;
+  box-shadow:    var(--shadow-sm);
+  transition:    v.$transition-base;
+  height:        100%;
+
+  // Keyboard focus
+  &:focus-visible {
+    outline:        2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+// ── Image ─────────────────────────────────────────────────────────────────
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image {
+  width:      100%;
+  height:     220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+
+  .card:hover & { transform: scale(1.06); }
+}
+
+// ── Category badge (top-right corner) ────────────────────────────────────
+.categoryBadge {
+  position:      absolute;
+  top:           v.$sp-3;
+  inset-inline-end: v.$sp-3; // RTL-aware right
+  padding:       v.$sp-1 v.$sp-3;
+  border-radius: v.$radius-full;
+  font-size:     v.$text-xs;
+  font-weight:   700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.catXC   { background: rgba(34, 197, 94, 0.85);  color: #fff; }
+.catMTB  { background: rgba(239, 68, 68, 0.85);  color: #fff; }
+.cateMTB { background: rgba(99, 102, 241, 0.85); color: #fff; }
+
+// ── Body ──────────────────────────────────────────────────────────────────
+.body {
+  padding:         v.$sp-5;
+  display:         flex;
+  flex-direction:  column;
+  gap:             v.$sp-2;
+  flex:            1;
+}
+
+.location {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-1;
+  font-size:   v.$text-xs;
+  color:       var(--text-muted);
+  font-weight: 500;
+}
+
+.categoryLabel {
+  margin-inline-start: auto;
+  font-size:   v.$text-xs;
+  color:       var(--text-muted);
+}
+
+.title {
+  font-size:   v.$text-xl;
+  font-weight: 800;
+  line-height: 1.25;
+  color:       var(--text-primary);
+  margin-top:  v.$sp-1;
+}
+
+.subtitle {
+  font-size:   v.$text-sm;
+  color:       var(--text-secondary);
+  line-height: 1.5;
+}
+
+// ── Chips row ─────────────────────────────────────────────────────────────
+.meta {
+  display:   flex;
+  gap:       v.$sp-2;
+  flex-wrap: wrap;
+  margin-top: v.$sp-1;
+}
+
+.chip {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           v.$sp-1;
+  padding:       v.$sp-1 v.$sp-3;
+  background:    var(--bg-secondary);
+  border-radius: v.$radius-full;
+  font-size:     v.$text-xs;
+  font-weight:   500;
+  color:         var(--text-secondary);
+}
+
+// ── Difficulty ────────────────────────────────────────────────────────────
+.difficultyRow {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-2;
+  margin-top:  v.$sp-1;
+}
+
+.difficultyLabel {
+  font-size:   v.$text-xs;
+  color:       var(--text-muted);
+  font-weight: 500;
+}
+
+.dots {
+  display: flex;
+  gap:     v.$sp-1;
+}
+
+.dot {
+  width:         10px;
+  height:        10px;
+  border-radius: v.$radius-full;
+  background:    var(--difficulty-empty);
+  transition:    v.$transition-fast;
+
+  &.filled { background: var(--accent); }
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────
+.footer {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  margin-top:      auto;
+  padding-top:     v.$sp-4;
+  border-top:      1px solid var(--border);
+}
+
+.price {
+  display:     flex;
+  align-items: baseline;
+  gap:         v.$sp-1;
+}
+
+.priceFrom {
+  font-size:   v.$text-xs;
+  color:       var(--text-muted);
+}
+
+.priceValue {
+  font-size:   v.$text-2xl;
+  font-weight: 800;
+  color:       var(--accent);
+}
+
+.detailsCta {
+  font-size:   v.$text-sm;
+  font-weight: 600;
+  color:       var(--accent);
+  transition:  v.$transition-fast;
+
+  .card:hover & {
+    transform: translateX(-4px); // RTL: shift right visually
+  }
+}

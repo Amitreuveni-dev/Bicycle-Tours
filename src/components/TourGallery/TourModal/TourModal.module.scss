@@ -1,0 +1,278 @@
+@use '../../../styles/variables.module' as v;
+
+// ── Backdrop ──────────────────────────────────────────────────────────────
+.backdrop {
+  position:         fixed;
+  inset:            0;
+  z-index:          2000;
+  background:       rgba(0, 0, 0, 0.72);
+  backdrop-filter:  blur(6px);
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  padding:          v.$sp-4;
+  overflow-y:       auto;
+}
+
+// ── Modal panel ───────────────────────────────────────────────────────────
+.modal {
+  position:       relative;
+  background:     var(--bg-card);
+  border-radius:  v.$radius-lg;
+  width:          100%;
+  max-width:      680px;
+  max-height:     90vh;
+  display:        flex;
+  flex-direction: column;
+  overflow:       hidden;
+  box-shadow:     var(--shadow-lg);
+  border:         1px solid var(--border-strong);
+}
+
+.closeBtn {
+  position:    absolute;
+  top:         v.$sp-4;
+  inset-inline-start: v.$sp-4; // RTL: left side
+  z-index:     10;
+  width:       38px;
+  height:      38px;
+  border-radius: v.$radius-full;
+  background:  rgba(0, 0, 0, 0.5);
+  color:       #fff;
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+  transition:  v.$transition-fast;
+  backdrop-filter: blur(4px);
+
+  &:hover { background: rgba(0, 0, 0, 0.75); }
+}
+
+// ── Image section ─────────────────────────────────────────────────────────
+.imageWrapper {
+  position:    relative;
+  flex-shrink: 0;
+}
+
+.image {
+  width:      100%;
+  height:     260px;
+  object-fit: cover;
+
+  @include v.md { height: 200px; }
+}
+
+.imageOverlay {
+  position:   absolute;
+  inset:      0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 55%);
+}
+
+.imageContent {
+  position:         absolute;
+  bottom:           v.$sp-5;
+  inset-inline:     v.$sp-5;
+  display:          flex;
+  flex-direction:   column;
+  gap:              v.$sp-2;
+}
+
+.categoryBadge {
+  align-self:    flex-start;
+  padding:       v.$sp-1 v.$sp-3;
+  border-radius: v.$radius-full;
+  font-size:     v.$text-xs;
+  font-weight:   700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.catXC   { background: rgba(34, 197, 94, 0.85);  color: #fff; }
+.catMTB  { background: rgba(239, 68, 68, 0.85);  color: #fff; }
+.cateMTB { background: rgba(99, 102, 241, 0.85); color: #fff; }
+
+.title {
+  font-size:   v.$text-3xl;
+  font-weight: 900;
+  color:       #fff;
+  line-height: 1.2;
+
+  @include v.md { font-size: v.$text-2xl; }
+}
+
+.subtitle {
+  font-size: v.$text-sm;
+  color:     rgba(255, 255, 255, 0.75);
+}
+
+// ── Scrollable content ────────────────────────────────────────────────────
+.content {
+  padding:    v.$sp-6;
+  overflow-y: auto;
+  display:    flex;
+  flex-direction: column;
+  gap:        v.$sp-6;
+
+  @include v.md { padding: v.$sp-4; }
+}
+
+// ── Stats bar ─────────────────────────────────────────────────────────────
+.statsBar {
+  display:         flex;
+  gap:             v.$sp-4;
+  flex-wrap:       wrap;
+  padding:         v.$sp-4;
+  background:      var(--bg-secondary);
+  border-radius:   v.$radius-md;
+  border:          1px solid var(--border);
+}
+
+.stat {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-2;
+  font-size:   v.$text-sm;
+  font-weight: 600;
+  color:       var(--text-secondary);
+  flex:        1;
+  min-width:   120px;
+
+  svg { color: var(--accent); flex-shrink: 0; }
+}
+
+// ── Difficulty ────────────────────────────────────────────────────────────
+.difficultyRow {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-3;
+}
+
+.difficultyLabel {
+  font-size:   v.$text-sm;
+  font-weight: 600;
+  color:       var(--text-secondary);
+}
+
+.dots { display: flex; gap: v.$sp-1; }
+.dot {
+  width: 12px; height: 12px;
+  border-radius: v.$radius-full;
+  background: var(--difficulty-empty);
+  &.filled { background: var(--accent); }
+}
+
+// ── Description ───────────────────────────────────────────────────────────
+.description {
+  font-size:   v.$text-base;
+  color:       var(--text-secondary);
+  line-height: 1.75;
+}
+
+// ── Generic section ───────────────────────────────────────────────────────
+.section {}
+
+.sectionTitle {
+  font-size:     v.$text-lg;
+  font-weight:   700;
+  color:         var(--text-primary);
+  margin-bottom: v.$sp-4;
+}
+
+// ── Included list ─────────────────────────────────────────────────────────
+.includedList {
+  display:   grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap:       v.$sp-3;
+}
+
+.includedItem {
+  display:     flex;
+  align-items: center;
+  gap:         v.$sp-3;
+  padding:     v.$sp-3 v.$sp-4;
+  background:  var(--accent-light);
+  border-radius: v.$radius-md;
+  font-size:   v.$text-sm;
+  font-weight: 500;
+  color:       var(--text-primary);
+}
+
+.includedIcon { color: var(--accent); flex-shrink: 0; }
+
+// ── Equipment list ────────────────────────────────────────────────────────
+.equipmentList {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       v.$sp-2;
+}
+
+.equipmentItem {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           v.$sp-2;
+  padding:       v.$sp-2 v.$sp-4;
+  background:    var(--bg-secondary);
+  border:        1px solid var(--border);
+  border-radius: v.$radius-full;
+  font-size:     v.$text-sm;
+  color:         var(--text-secondary);
+}
+
+.bullet { color: var(--accent); font-size: v.$text-lg; line-height: 1; }
+
+// ── Highlights ────────────────────────────────────────────────────────────
+.highlightList {
+  display:        flex;
+  flex-direction: column;
+  gap:            v.$sp-2;
+}
+
+.highlightItem {
+  padding:       v.$sp-3 v.$sp-4;
+  background:    var(--bg-secondary);
+  border-radius: v.$radius-md;
+  font-size:     v.$text-sm;
+  font-weight:   500;
+  color:         var(--text-primary);
+  border-inline-start: 3px solid var(--accent); // RTL: border on right
+}
+
+// ── Modal footer ──────────────────────────────────────────────────────────
+.modalFooter {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  padding-top:     v.$sp-4;
+  border-top:      1px solid var(--border);
+  gap:             v.$sp-4;
+  flex-wrap:       wrap;
+}
+
+.priceBlock {
+  display:     flex;
+  align-items: baseline;
+  gap:         v.$sp-1;
+}
+
+.priceFrom  { font-size: v.$text-sm;  color: var(--text-muted); }
+.priceValue { font-size: v.$text-4xl; font-weight: 800; color: var(--accent); }
+.pricePer   { font-size: v.$text-sm;  color: var(--text-muted); }
+
+.whatsappBtn {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           v.$sp-2;
+  padding:       v.$sp-3 v.$sp-6;
+  background:    #25d366;
+  color:         #fff;
+  font-size:     v.$text-base;
+  font-weight:   700;
+  border-radius: v.$radius-full;
+  transition:    v.$transition-fast;
+  box-shadow:    0 4px 20px rgba(37, 211, 102, 0.35);
+
+  &:hover {
+    background: #1ebe5c;
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+  }
+}
