@@ -63,7 +63,7 @@
   },
   {
     "id": "3",
-    "active": true,
+    "active": false,
     "title": "הגליל העליון — eMTB",
     "subtitle": "חוויית eMTB בשבילי הצפון הפתוחים",
     "price": 890,
@@ -92,7 +92,7 @@
   },
   {
     "id": "4",
-    "active": true,
+    "active": false,
     "title": "הרי יהודה",
     "subtitle": "קניונים, היסטוריה ושבילי אדמה עתיקים",
     "price": 560,
@@ -120,7 +120,7 @@
   },
   {
     "id": "5",
-    "active": true,
+    "active": false,
     "title": "חוף הכינרת",
     "subtitle": "רכיבת בוקר קסומה לאורך שפת הים",
     "price": 380,
@@ -148,7 +148,7 @@
   },
   {
     "id": "6",
-    "active": true,
+    "active": false,
     "title": "רמת הגולן — Expert",
     "subtitle": "אתגר הגולן: שבילים קשים, נוף אגדי",
     "price": 920,
