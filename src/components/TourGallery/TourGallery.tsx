@@ -71,7 +71,7 @@ export default function TourGallery() {
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.12 }}
           >
-            מהכרמל הירוק ועד מכתש רמון — מסלול בשבילך
+         
           </motion.p>
         </div>
 
