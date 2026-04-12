@@ -21,11 +21,11 @@
       { "icon": "ShieldCheck", "text": "ציוד בטיחות מלא" },
       { "icon": "Users",       "text": "מדריך מוסמך ומנוסה" },
       { "icon": "Coffee",      "text": "Lunch Box" },
-      { "icon": "FileCheck",   "text": "ביטוח מקיף" },
       { "icon": "FileCheck",   "text": "העברות והובלת אפניים" }
     ],
     "notIncluded": [
       { "icon": "X", "text": "טלוויזיה בם (מתקדמים בטבע)" }
+      { "icon": "FileCheck",   "text": "ביטוח מקיף" }
     ],
     "equipment": ["קסדה", "כפפות", "נעלי רכיבה", "משקפי מגן"],
     "highlights": ["פסגות הרי הרילה המושלגות", "שבילי יחיד טכניים", "נחלים זורמים בדרך"]
