@@ -22,7 +22,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 };
 
 function buildWhatsAppMessage(tour: Tour): string {
-  const msg = `שלום! אני מעוניין/ת בטיול "${tour.title}" — ${tour.duration}, ${tour.distance}, ${tour.location}. החל מ-₪${tour.price}. אשמח לשמוע פרטים נוספים 😊`;
+  const msg = `שלום! אני מעוניין/ת בטיול "${tour.title}" — ${tour.duration}, ${tour.distance}, ${tour.location}. החל מ-€${tour.price}. אשמח לשמוע פרטים נוספים 😊`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
@@ -118,6 +118,16 @@ export default function TourModal({ tour, onClose }: TourModalProps) {
               {/* Description */}
               <p className={styles.description}>{tour.description}</p>
 
+              {/* Route details (optional) */}
+              {tour.routeDetails && (
+                <section className={styles.section} aria-label="פרטי המסלול">
+                  <h3 className={styles.sectionTitle}>🗺️ פרטי המסלול</h3>
+                  <div className={styles.description} style={{ whiteSpace: 'pre-line' }}>
+                    {tour.routeDetails}
+                  </div>
+                </section>
+              )}
+
               {/* What's Included */}
               <section className={styles.section} aria-label="מה כלול">
                 <h3 className={styles.sectionTitle}>✅ מה כלול?</h3>
@@ -133,6 +143,21 @@ export default function TourModal({ tour, onClose }: TourModalProps) {
                   })}
                 </ul>
               </section>
+
+              {/* What's NOT Included */}
+              {tour.notIncluded && tour.notIncluded.length > 0 && (
+                <section className={styles.section} aria-label="מה לא כלול">
+                  <h3 className={styles.sectionTitle}>❌ מה לא כלול?</h3>
+                  <ul className={styles.notIncludedList}>
+                    {tour.notIncluded.map((item) => (
+                      <li key={item.text} className={styles.notIncludedItem}>
+                        <X size={18} className={styles.notIncludedIcon} aria-hidden="true" />
+                        <span>{item.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
               {/* Equipment list */}
               <section className={styles.section} aria-label="ציוד אישי נדרש">
@@ -161,7 +186,7 @@ export default function TourModal({ tour, onClose }: TourModalProps) {
               <div className={styles.modalFooter}>
                 <div className={styles.priceBlock}>
                   <span className={styles.priceFrom}>החל מ-</span>
-                  <span className={styles.priceValue}>₪{tour.price.toLocaleString()}</span>
+                  <span className={styles.priceValue}>€{tour.price.toLocaleString()}</span>
                   <span className={styles.pricePer}> לאדם</span>
                 </div>
                 <motion.a

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Clock, TrendingUp } from 'lucide-react';
+import { MapPin, Clock, TrendingUp, Route } from 'lucide-react';
 import type { Tour } from '../../../types';
 import styles from './TourCard.module.scss';
 
@@ -79,6 +79,10 @@ export default function TourCard({ tour, onSelect }: TourCardProps) {
             {tour.duration}
           </span>
           <span className={styles.chip}>
+            <Route size={13} aria-hidden="true" />
+            {tour.distance}
+          </span>
+          <span className={styles.chip}>
             <TrendingUp size={13} aria-hidden="true" />
             {tour.elevation}
           </span>
@@ -94,7 +98,7 @@ export default function TourCard({ tour, onSelect }: TourCardProps) {
         <div className={styles.footer}>
           <div className={styles.price}>
             <span className={styles.priceFrom}>החל מ-</span>
-            <span className={styles.priceValue}>₪{tour.price.toLocaleString()}</span>
+            <span className={styles.priceValue}>€{tour.price.toLocaleString()}</span>
           </div>
           <span className={styles.detailsCta}>פרטים ←</span>
         </div>

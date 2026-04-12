@@ -126,7 +126,6 @@ export default function TourMatchForm() {
             </legend>
             <div className={styles.radioGroup}>
               {([
-                { value: 'regular',  label: 'רגילה (MTB / XC)' },
                 { value: 'electric', label: 'חשמלית (eMTB)' },
               ] as const).map(({ value, label }) => (
                 <label

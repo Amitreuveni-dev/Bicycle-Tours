@@ -36,7 +36,9 @@ export interface Tour {
   elevation: string;           // e.g. "700 מ'"
   location: string;            // e.g. "הגולן"
   description: string;         // Hebrew paragraph
+  routeDetails?: string;       // Optional: detailed itinerary breakdown
   included: IncludedItem[];    // What's included (with icon)
+  notIncluded?: IncludedItem[]; // What's NOT included (with icon)
   equipment: string[];         // Required personal equipment list
   highlights: string[];        // 3 key selling points
 }

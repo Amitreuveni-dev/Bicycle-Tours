@@ -180,24 +180,63 @@
 
 // ── Included list ─────────────────────────────────────────────────────────
 .includedList {
-  display:   grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap:       v.$sp-3;
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$sp-2;
 }
 
 .includedItem {
-  display:     flex;
+  display: flex;
   align-items: center;
-  gap:         v.$sp-3;
-  padding:     v.$sp-3 v.$sp-4;
-  background:  var(--accent-light);
-  border-radius: v.$radius-md;
-  font-size:   v.$text-sm;
+  gap: v.$sp-3;
+  padding: v.$sp-2 0;
+  font-size: v.$text-sm;
   font-weight: 500;
-  color:       var(--text-primary);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
 }
 
-.includedIcon { color: var(--accent); flex-shrink: 0; }
+.includedItem:last-child {
+  border-bottom: none;
+}
+
+.includedIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+// ── Not Included list ─────────────────────────────────────────────────────
+.notIncludedList {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$sp-2;
+}
+
+.notIncludedItem {
+  display: flex;
+  align-items: center;
+  gap: v.$sp-3;
+  padding: v.$sp-2 0;
+  font-size: v.$text-sm;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.notIncludedItem:last-child {
+  border-bottom: none;
+}
+
+.notIncludedIcon {
+  color: #ef4444;
+  flex-shrink: 0;
+}
 
 // ── Equipment list ────────────────────────────────────────────────────────
 .equipmentList {
