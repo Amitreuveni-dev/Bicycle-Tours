@@ -65,7 +65,7 @@ export default function Hero() {
         <motion.p className={styles.subtitle} variants={fadeUp}>
           מסלולי MTB מדהימים, מדריכים מקצועיים, וחוויות שיישארו איתך לנצח.
           <br />
-          י.
+          
         </motion.p>
 
         {/* CTA row */}
