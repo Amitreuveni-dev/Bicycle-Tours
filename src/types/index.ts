@@ -25,6 +25,7 @@ export interface IncludedItem {
 // ── Main Tour entity ───────────────────────────────────────────────────────
 export interface Tour {
   id: string;
+  active?: boolean;             // false = hidden from gallery (draft/disabled)
   title: string;
   subtitle: string;
   price: number;               // ILS — starting price per person

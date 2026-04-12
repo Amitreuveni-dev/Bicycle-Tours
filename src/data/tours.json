@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "active": true,
     "title": "Pirin, Rhodopes and Sredna Gora",
     "subtitle": "שבילים ביערות עבותים ורכסי הרים מרהיבים",
     "price": 1880,
@@ -31,6 +32,7 @@
   },
   {
     "id": "2",
+    "active": false,
     "title": "הנגב הסודי",
     "subtitle": "כניסה ללב המדבר — נוף ירחי ואתגר אמיתי",
     "price": 680,
@@ -59,6 +61,7 @@
   },
   {
     "id": "3",
+    "active": true,
     "title": "הגליל העליון — eMTB",
     "subtitle": "חוויית eMTB בשבילי הצפון הפתוחים",
     "price": 890,
@@ -87,6 +90,7 @@
   },
   {
     "id": "4",
+    "active": true,
     "title": "הרי יהודה",
     "subtitle": "קניונים, היסטוריה ושבילי אדמה עתיקים",
     "price": 560,
@@ -114,6 +118,7 @@
   },
   {
     "id": "5",
+    "active": true,
     "title": "חוף הכינרת",
     "subtitle": "רכיבת בוקר קסומה לאורך שפת הים",
     "price": 380,
@@ -141,6 +146,7 @@
   },
   {
     "id": "6",
+    "active": true,
     "title": "רמת הגולן — Expert",
     "subtitle": "אתגר הגולן: שבילים קשים, נוף אגדי",
     "price": 920,

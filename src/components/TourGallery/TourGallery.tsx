@@ -11,7 +11,7 @@ import styles from './TourGallery.module.scss';
 // TourGallery — filter tabs, skeleton loaders, responsive card grid, modal
 // ─────────────────────────────────────────────────────────────────────────────
 
-const tours = toursData as Tour[];
+const tours = (toursData as Tour[]).filter(t => t.active !== false);
 
 const FILTERS: { label: string; value: FilterCategory }[] = [
   { label: 'הכל',  value: 'all'  },
