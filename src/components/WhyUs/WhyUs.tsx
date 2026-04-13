@@ -30,13 +30,13 @@ const FEATURES: (Feature & { iconComp: React.ElementType })[] = [
     icon:        'Wrench',
     iconComp:    Wrench,
     title:       'תמיכה טכנית בשטח',
-    description: 'טכנאי אופניים מוסמך מלווה כל טיול — שטח לא עוצר אותנו.',
+    description: 'לווי טכני מקצועי — שטח לא עוצר אותנו.',
   },
   {
     icon:        'Map',
     iconComp:    Map,
     title:       'מסלולים ייחודיים',
-    description: 'שבילים שלא תמצאו בשום מדריך — גלויים ועמוקים, ממדבר לגליל.',
+    description: 'שבילים שלא תמצאו בשום מדריך — גלויים ועמוקים, ממדבר, שפלה, עמק והר.',
   },
   {
     icon:        'Heart',
