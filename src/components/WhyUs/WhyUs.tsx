@@ -14,12 +14,12 @@ const FEATURES: (Feature & { iconComp: React.ElementType })[] = [
     title:       'בטיחות מעל הכל',
     description: 'כל מסלול מתוכנן עם מדריכים מוסמכים, ציוד בטיחות מלא וביטוח מקיף לכל רוכב.',
   },
-  {
+ /* {
     icon:        'Star',
     iconComp:    Star,
     title:       'ניסיון של 12 שנה',
     description: 'מאות מסלולים מאחורינו — אנחנו מכירים כל שביל, כל אבן וכל נוף בישראל.',
-  },
+  },*/
   {
     icon:        'Users',
     iconComp:    Users,
