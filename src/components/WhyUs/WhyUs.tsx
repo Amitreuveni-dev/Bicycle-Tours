@@ -19,7 +19,7 @@ const FEATURES: (Feature & { iconComp: React.ElementType })[] = [
     iconComp:    Star,
     title:       'ניסיון של 3 שנים',
     description: ',תכנון מסלולים רבים מאחורינו — אנחנו מכירים כל שביל, כל אבן וכל נוף בישראל.',
- // },
+  },
   {
     icon:        'Users',
     iconComp:    Users,
