@@ -38,6 +38,7 @@ export interface Tour {
   location: string;            // e.g. "הגולן"
   description: string;         // Hebrew paragraph
   routeDetails?: string;       // Optional: detailed itinerary breakdown
+  hotels?: { name: string; url: string }[]; // Accommodation links for routeDetails
   included: IncludedItem[];    // What's included (with icon)
   notIncluded?: IncludedItem[]; // What's NOT included (with icon)
   equipment: string[];         // Required personal equipment list

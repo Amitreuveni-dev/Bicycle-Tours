@@ -31,6 +31,21 @@ interface TourModalProps {
   onClose: () => void;
 }
 
+function renderWithHotelLinks(
+  text: string,
+  hotels: { name: string; url: string }[]
+): React.ReactNode {
+  if (!hotels.length) return text;
+  const pattern = hotels.map(h => h.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const parts = text.split(new RegExp(`(${pattern})`, 'g'));
+  return parts.map((part, i) => {
+    const hotel = hotels.find(h => h.name === part);
+    return hotel
+      ? <a key={i} href={hotel.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary, #f97316)', textDecoration: 'underline' }}>{part}</a>
+      : part;
+  });
+}
+
 function DifficultyDots({ level }: { level: number }) {
   return (
     <div className={styles.dots} aria-label={`רמת קושי ${level} מתוך 5`}>
@@ -123,7 +138,7 @@ export default function TourModal({ tour, onClose }: TourModalProps) {
                 <section className={styles.section} aria-label="פרטי המסלול">
                   <h3 className={styles.sectionTitle}>🗺️ פרטי המסלול</h3>
                   <div className={styles.description} style={{ whiteSpace: 'pre-line' }}>
-                    {tour.routeDetails}
+                    {renderWithHotelLinks(tour.routeDetails, tour.hotels ?? [])}
                   </div>
                 </section>
               )}
