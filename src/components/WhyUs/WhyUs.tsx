@@ -12,13 +12,13 @@ const FEATURES: (Feature & { iconComp: React.ElementType })[] = [
     icon:        'ShieldCheck',
     iconComp:    ShieldCheck,
     title:       'בטיחות מעל הכל',
-    description: 'כל מסלול מתוכנן עם מדריכים מוסמכים, ציוד בטיחות מלא וביטוח מקיף לכל רוכב.',
+    description: 'כל מסלול מתוכנן עם מדריכים מוסמכים.',
   },
  {
     icon:        'Star',
     iconComp:    Star,
     title:       'נסיון עשיר ומגוון',
-    description: ',תכנון מסלולים רבים מאחורינו',
+    description: 'תכנון מסלולים רבים מאחורינו',
   },
   {
     icon:        'Users',
