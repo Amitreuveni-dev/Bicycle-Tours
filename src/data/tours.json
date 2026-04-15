@@ -17,7 +17,9 @@
     "hotels": [
       { "name": "SPA Hotel St.Ivan Rilski", "url": "https://www.saintivanrilski.com/en/" },
       { "name": "Starosel WINE&SPA",        "url": "https://starosel.com/en/" },
-      { "name": "Hotel Lion Bansko",        "url": "https://hotelbudapest.bg/" }
+      { "name": "Hotel Lion Bansko",        "url": "https://hotelbudapest.bg/" },
+      { "name": "Grand Hotel Sofia",        "url": "https://www.grandhotelsofia.com/en/" },
+      { "name": "Budapest Hotel",          "url": "https://hotelbudapest.bg/" }
     ],
     "included":[
       { "icon": "FileCheck",   "text": "טיסות בינלאומיות"},
