@@ -18,7 +18,7 @@ const FEATURES: (Feature & { iconComp: React.ElementType })[] = [
     icon:        'Star',
     iconComp:    Star,
     title:       'נסיון עשיר ומגוון',
-    description: 'תכנון מסלולים רבים מאחורינו',
+    description: 'תכנון מסלולים רבים מאחורינו.',
   },
   {
     icon:        'Users',
