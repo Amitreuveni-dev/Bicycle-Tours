@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Badge */}
         <motion.div className={styles.badge} variants={fadeUp}>
           <Compass size={15} aria-hidden="true" />
-          <span>טיולי אופניים בוטיק בארץ ובעולם</span>
+          <span>טיולי בוטיק בארץ ובעולם</span>
         </motion.div>
 
         {/* Headline */}
