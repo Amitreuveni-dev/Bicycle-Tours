@@ -58,7 +58,7 @@ export default function Hero() {
         {/* Headline */}
         <motion.h1 className={styles.title} variants={fadeUp}>
           גלה את העולם<br />
-          <span className={styles.accent}>על שני גלגלים</span>
+          <span className={styles.accent}>על שתי רגליים או שני גלגלים</span>
         </motion.h1>
 
         {/* Sub-title */}
